@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* line 1, ../scss/top.scss */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, select, textarea, p, blockquote, th, td, address {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, ../scss/top.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 9, ../scss/top.scss */
+img {
+  font-size: 0px;
+  line-height: 0px;
+  border: 0;
+}
+
+/* line 14, ../scss/top.scss */
+fieldset {
+  border: 0;
+}
+
+/* line 17, ../scss/top.scss */
+textarea {
+  resize: none;
+}
+
+/* line 20, ../scss/top.scss */
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 24, ../scss/top.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 27, ../scss/top.scss */
+caption, th {
+  text-align: left;
+}
+
+/* line 30, ../scss/top.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/* line 33, ../scss/top.scss */
+h5, h6 {
+  font-size: 100%;
+}
+
+/* line 36, ../scss/top.scss */
+em {
+  font-style: italic;
+}
+
+/* line 40, ../scss/top.scss */
+body {
+  font-size: 13px;
+  font: 13px 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  *font-size: small;
+  *font: x-small;
+  line-height: 1.6em;
+}
+
+/* line 49, ../scss/top.scss */
+a,
+a:link {
+  color: #008822;
+  text-decoration: none;
+}
+
+/* line 56, ../scss/top.scss */
+a:active,
+a:hover,
+a:focus {
+  color: #23A30E;
+  text-decoration: underline;
+}
+
+/* line 73, ../scss/top.scss */
+.structure {
+  width: 900px;
+  margin: 0 auto;
+}
+
+/* line 78, ../scss/top.scss */
+#header {
+  padding: 10px;
+  background: black;
+}
+/* line 82, ../scss/top.scss */
+#header:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+/* line 91, ../scss/top.scss */
+#header h1 {
+  float: left;
+  color: gray;
+  font-size: 30px;
+}
+/* line 98, ../scss/top.scss */
+#header ul {
+  float: right;
+}
+/* line 102, ../scss/top.scss */
+#header ul li {
+  float: left;
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+/* line 112, ../scss/top.scss */
+#content {
+  padding: 15px 0;
+}
+/* line 115, ../scss/top.scss */
+#content:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+/* line 124, ../scss/top.scss */
+#content ul li,
+#content ul li img {
+  line-height: 0;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+/* line 132, ../scss/top.scss */
+#content h2 {
+  font-size: 26px;
+  line-height: 1.5em;
+}
+/* line 137, ../scss/top.scss */
+#content #main {
+  float: left;
+  width: 580px;
+}
+/* line 144, ../scss/top.scss */
+#content #sub {
+  float: right;
+  width: 280px;
+}

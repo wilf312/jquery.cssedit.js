@@ -1,0 +1,24 @@
+{
+  "name": "cssEdit",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wilf312/cssEdit.git"
+  },
+  "author": "la",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/wilf312/cssEdit/issues"
+  },
+  "homepage": "https://github.com/wilf312/cssEdit",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-sass": "~0.7.3"
+  }
+}
