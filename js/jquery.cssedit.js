@@ -43,7 +43,6 @@
     };
     var isPadding  = false;
     var isChanging = false;
-    var weight     = 5;
 
 
     $('body')
@@ -80,8 +79,10 @@
             isDblClicked = true; // クリック済み
 
             dom.select = $(this).css({
+                            border : 'solid 3px red',
                                 webkitFilter: "grayscale(100%)"
                             });
+
         });
     };
 
@@ -134,32 +135,40 @@
 
     };
 
-    // マウスホイールでDOM操作
-    $("body").on({
-        mousewheel: function(e) {
 
-            var y = 0;
+    // 選択中のDOMからデバッグテキストにHTMLを出力
+    $.fn.cssedit.moveAction = function(aEvent, aMoveDistance) {
 
-            // ダブルクリックされ、キー入力中だったときにDOMを移動させる
-            if (isDblClicked &&
-                nowKey !== '') {
+        $.fn.cssedit.outputDebug(dom.select, isPadding);
 
-                // 移動距離の設定
-                y = event.deltaY / weight;
+        $.fn.cssedit.moveDom(dom.select, aMoveDistance, nowKey, isPadding);
 
-                // DOMの移動
-                $.fn.cssedit.moveDom(dom.select, y, nowKey, isPadding);
 
-                // 現在のmargin,paddingをデバッグエリアに表示
-                $.fn.cssedit.outputDebug(dom.select, isPadding);
+        aEvent.preventDefault();
+        aEvent.stopPropagation();
 
-                // scrollイベントのキャンセル
-                if (e.target == 'body') return;
-                e.preventDefault();
-                e.stopPropagation();
-            }
-        }});
+    };
 
+
+    $(document).on('contextmenu', function() {
+        if (dom.select === null) {
+            return;
+        }
+
+        dom.select.css({
+            border : 'none'
+        })
+
+        dom.select = dom.select.parent();
+
+
+        dom.select.css({
+            border : 'solid 3px red'
+        })
+
+
+        return false;
+    });
 
 
 
@@ -177,19 +186,30 @@
         .bind('keydown', 's', function(e) {
             nowKey = 'down';
         })
-        .bind('keyup', 'a', function() {
-            nowKey = '';
+        .bind('keydown', 's', function(e) {
+            nowKey = 'down';
         })
-        .bind('keyup', 'd', function() {
-            nowKey = '';
+
+        .bind('keydown', 'shift+up', function(e) {
+            $.fn.cssedit.moveAction(e, 10);
         })
-        .bind('keyup', 'w', function() {
-            nowKey = '';
+        .bind('keydown', 'shift+down', function(e) {
+            $.fn.cssedit.moveAction(e, -10);
         })
-        .bind('keyup', 's', function() {
-            nowKey = '';
+
+        .bind('keydown', 'alt+up', function(e) {
+            $.fn.cssedit.moveAction(e, 0.1);
         })
-        // paddingとmarginを切り返る
+        .bind('keydown', 'alt+down', function(e) {
+            $.fn.cssedit.moveAction(e, -0.1);
+        })
+
+        .bind('keydown', 'up', function(e) {
+            $.fn.cssedit.moveAction(e, 1);
+        })
+        .bind('keydown', 'down', function(e) {
+            $.fn.cssedit.moveAction(e, 1);
+        })
         .bind('keydown', 'shift+f', function() {
             if (isChanging) { // 連続で入力されたときは処理を実行しない
                 return;
