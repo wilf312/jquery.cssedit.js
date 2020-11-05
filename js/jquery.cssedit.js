@@ -142,11 +142,6 @@
         $.fn.cssedit.outputDebug(dom.select, isPadding);
 
         $.fn.cssedit.moveDom(dom.select, aMoveDistance, nowKey, isPadding);
-
-
-        aEvent.preventDefault();
-        aEvent.stopPropagation();
-
     };
 
 
@@ -156,14 +151,14 @@
         }
 
         dom.select.css({
-            border : 'none'
+            outline : 'none'
         })
 
         dom.select = dom.select.parent();
 
 
         dom.select.css({
-            border : 'solid 3px red'
+            outline : 'solid 3px red'
         })
 
 
@@ -174,20 +169,24 @@
 
     // キー入力の操作
     $(document)
-        .bind('keydown', 'a', function() {
-            nowKey = 'left';
-        })
-        .bind('keydown', 'd', function() {
-            nowKey = 'right';
-        })
-        .bind('keydown', 'w', function() {
-            nowKey = 'up';
-        })
-        .bind('keydown', 's', function(e) {
-            nowKey = 'down';
-        })
-        .bind('keydown', 's', function(e) {
-            nowKey = 'down';
+        .keypress((event) => {
+            // key codeを取得
+            const key = String.fromCodePoint(event.which)
+
+            if (key === 'a') {
+                nowKey = 'left';
+            }
+            else if (key === 'd') {
+                nowKey = 'right';
+            }
+            else if (key === 'w') {
+                nowKey = 'up';
+            }
+            else if (key === 's') {
+                nowKey = 'down';
+            }
+            // action実行
+            $.fn.cssedit.moveAction(nowKey, 1);
         })
 
         .bind('keydown', 'shift+up', function(e) {
