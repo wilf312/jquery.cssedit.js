@@ -4,7 +4,9 @@
   "description": "",
   "main": "Gruntfile.js",
   "scripts": {
-    "build": "grunt",
+    "build": "run-s deleteDist build:transpile",
+    "build:transpile": "run-p gulp webpack",
+    "deleteDist": "del dist",
     "gulp": "gulp",
     "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
