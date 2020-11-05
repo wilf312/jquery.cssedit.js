@@ -203,3 +203,4 @@ $(document)
 });
 
 
+$('img, p').cssedit()
