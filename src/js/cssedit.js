@@ -14,7 +14,7 @@ var isChanging = false;
 
 
 $('body')
-.append('<div style="background: white; width: 300px; height: 240px; position: fixed; right: 0; top: 0;"><p id="cssedit-type" style="font-size: 20px;">margin</p><textarea style="font-size: 16px; width: 300px; height: 100px;" id="cssedit-debug"></textarea><p style="padding:5px;">W : Top<br>D : Right<br>S : Down<br>A : Left<br>Shift + F : change margin / padding </p></div>');
+.append('<div style="background: white; width: 300px; height: 240px; position: fixed; right: 0; top: 0;"><p id="cssedit-type" style="font-size: 20px;">margin</p><textarea style="font-size: 16px; width: 300px; height: 100px;" id="cssedit-debug"></textarea><p style="padding:5px;">please double click image<br>W : Top<br>D : Right<br>S : Down<br>A : Left<br>Shift + F : change margin / padding </p></div>');
 
 
 
