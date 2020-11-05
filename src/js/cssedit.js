@@ -1,5 +1,6 @@
+import $ from 'jquery'
 import {setHotkey} from './jQuery.Hotkeys'
-setHotkey()
+setHotkey($)
 
 
 var nowKey = '';          // keydown時の入力キー
