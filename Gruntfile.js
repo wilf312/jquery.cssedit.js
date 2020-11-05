@@ -12,22 +12,15 @@ module.exports = function(grunt) {
   }
   c.log("");
   grunt.initConfig({
-    sass: {
-      dist: {
-        files: [
-          {
-            expand: true,
-            cwd: "scss",
-            src: ["*.scss"],
-            dest: "css/",
-            ext: ".css"
-          }
-        ],
+    'dart-sass': {
+      target: {
         options: {
-          lineNumbers: true,
-          style: 'expanded'
+          expand: true,
+        },
+        files: {
+          'css/top.css': 'scss/top.scss'
         }
-      }
+      },
     },
     watch: {
       scss: {
@@ -36,6 +29,7 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.registerTask("default", ["sass"]);
-  return grunt.registerTask("_sass", ["sass"]);
+  grunt.loadNpmTasks('grunt-dart-sass')
+  grunt.registerTask("default", ["dart-sass"]);
+  return grunt.registerTask("_sass", ["dart-sass"]);
 };
