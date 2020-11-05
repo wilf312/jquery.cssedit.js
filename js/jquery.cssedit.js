@@ -156,14 +156,14 @@
         }
 
         dom.select.css({
-            border : 'none'
+            outline : 'none'
         })
 
         dom.select = dom.select.parent();
 
 
         dom.select.css({
-            border : 'solid 3px red'
+            outline : 'solid 3px red'
         })
 
 
