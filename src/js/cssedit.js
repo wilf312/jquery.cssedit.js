@@ -40,6 +40,7 @@ $.fn.cssedit.setDblClick = function(aDom) {
     // ダブルクリック済みだったら前回のDOMをリセット
     if (isDblClicked) {
       before.css({
+        outline: 'none',
         webkitFilter: "grayscale(0%)"
       });
     }
@@ -47,7 +48,7 @@ $.fn.cssedit.setDblClick = function(aDom) {
     isDblClicked = true; // クリック済み
     
     dom.select = $(this).css({
-      border : 'solid 3px red',
+      outline: 'solid 3px red',
       webkitFilter: "grayscale(100%)"
     });
     
