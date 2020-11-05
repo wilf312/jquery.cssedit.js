@@ -142,11 +142,6 @@
         $.fn.cssedit.outputDebug(dom.select, isPadding);
 
         $.fn.cssedit.moveDom(dom.select, aMoveDistance, nowKey, isPadding);
-
-
-        aEvent.preventDefault();
-        aEvent.stopPropagation();
-
     };
 
 
