@@ -1,0 +1,150 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,p,blockquote,th,td,address{
+    margin:0;
+    padding:0;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+img{
+    font-size:0px;
+    line-height:0px;
+    border:0;
+}
+fieldset{
+    border:0;
+}
+textarea {
+     resize : none;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight:normal;
+}
+h5,h6{
+    font-size:100%;
+}
+em{
+    font-style:italic;
+}
+
+body{
+    font-size:13px;
+    font:13px 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    *font-size: small;
+    *font: x-small;
+    line-height:1.6em;
+}
+
+a,
+a:link {
+    color: #008822;
+    text-decoration:none;
+}
+
+a:active,
+a:hover,
+a:focus {
+    color: #23A30E;
+    text-decoration:underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+//  CSS
+
+.structure {
+    width: 900px;
+    margin: 0 auto;
+}
+
+#header {
+    padding: 10px;
+    background: black;
+
+    &:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+
+
+    h1 {
+        float: left;
+        color: gray;
+        font-size: 30px;
+    }
+
+
+    ul {
+        float: right;
+
+
+        li {
+            float: left;
+            padding: 0 10px;
+            font-size: 15px;
+        }
+    }
+}
+
+
+
+#content {
+    padding: 15px 0;
+
+    &:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+
+    ul li ,
+    ul li img {
+        line-height: 0;
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    h2 {
+        font-size: 26px;
+        line-height: 1.5em;
+    }
+
+    #main {
+
+
+        float: left;
+        width: 600px;
+
+    }
+    #sub {
+        float: right;
+        width: 280px;
+
+    }
+
+}
