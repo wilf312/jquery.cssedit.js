@@ -1,6 +1,6 @@
 # jQuery.cssEdit
 
-## margin / paddingをガンガン操作しやすいツール的に使えるものを準備していきます。
+## margin / paddingを操作しやすいツール。
 
 ### イベントセット
 ```javascript
