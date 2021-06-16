@@ -23,7 +23,7 @@
   "homepage": "https://github.com/wilf312/cssEdit",
   "devDependencies": {},
   "dependencies": {
-    "del-cli": "^3.0.1",
+    "del-cli": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
     "jquery": "^3.5.1",
